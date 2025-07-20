@@ -70,7 +70,7 @@ h1 {
 }
 
 /* Desktop layout: 3 columns */
-@media (min-width: 998px) {
+@media (min-width: 992px) {
   .section {
   float: right;
     width: 30%;
@@ -86,7 +86,7 @@ h1 {
 }
 
 /* Tablet layout: 2 on top, 1 below */
-@media (min-width: 995px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 991px) {
   .section {
     float: left;
     width: 47%;  
