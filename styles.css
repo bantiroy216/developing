@@ -1,122 +1,79 @@
 * {
   box-sizing: border-box;
-  gap:20px;
-  border-radius:10px;
-  margin-bottom: 10px;
-  padding: 5px;
-   
-
-
 }
 
 body {
-  
-  margin: 20px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
 }
-
 
 h1 {
   text-align: center;
-  font-size: 2em;
   margin-bottom: 30px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.section {
+.row {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Columns for large devices like dekstop */
+.col-lg-4 {
+  width: 33.33%;
+  padding: 15px;
+}
+
+/* Columns for medium devices like tablet */
+@media (max-width: 991px) {
+  .col-md-6 {
+    width: 50%;
+    padding: 15px;
+  }
+
+  .col-md-12 {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Columns for small devices like mobile phone */
+@media (max-width: 767px) {
+  .col-sm-12 {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Box styling */
+.box {
   position: relative;
   border: 1px solid black;
-  padding: 60px 20px 20px;
-  margin-bottom: 20px;
-  background-color: #f4f4f4;
-
+  background-color: grey;
+  padding: 20px;
+  height: 100%;
 }
 
-/* Title base styling */
 .title {
   position: absolute;
   top: 0;
   right: 0;
-  border: 1px solid black;
-  padding: 10px;
+  padding: 5px 15px;
   font-weight: bold;
-  font-size: 1.2em;
   color: white;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
-/* Individual title background colors */
-.chicken .title {
-  background-color: #d9534f; /* red */
-}
-
-.paneer .title {
-  background-color: rgb(235, 174, 174) /* green */
-}
-
-.sushi .title {
-  background-color: rgb(212, 212, 55); /* blue */
-}
-
-/* Section background colors */
 .chicken {
-  background-color: grey;
+  background-color: red;
 }
 
-.beef {
+.paneer {
   background-color: grey;
 }
 
 .sushi {
-  background-color: grey;
+  background-color: yellow;
 }
-
-/* Desktop layout: 3 columns */
-@media (min-width: 992px) {
-  .section {
-  float: right;
-    width: 30%;
-    margin-right: 3%;
-    
-  }
-
-  .section:nth-child(3) {
-    margin-right: 5;
-  }
-
-
-}
-
-/* Tablet layout: 2 on top, 1 below */
-@media (min-width: 768px) and (max-width: 991px) {
-  .section {
-    float: left;
-    width: 47%;  
-    margin-right: 4%;
-  }
-
-  .section:nth-child(2n) {
-    margin-right: 5;
-  }
-
-  .section:nth-child(3) {
-  
-    width: 100%;
-    margin-top: 20px;
-  }
-
-  
-  
-
-  
-  }
-
-
-/* Mobile layout: stacked */
-@media (max-width: 767px) {
-  .section {
-    display:flex;
-    margin-bottom:20px;
-    width: 30%;
-    float: none;
-  }
-}
-
