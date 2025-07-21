@@ -113,9 +113,9 @@ h1 {
 /* Mobile layout: stacked */
 @media (max-width: 767px) {
   .section {
-    display:block;
+    display:flex;
     margin-bottom:20px;
-    width: 100%;
+    width: 30%;
     float: none;
   }
 }
